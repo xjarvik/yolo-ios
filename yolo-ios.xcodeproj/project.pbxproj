@@ -13,6 +13,12 @@
 		5BC65A6D26208C73000ADDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A6B26208C73000ADDD1 /* Main.storyboard */; };
 		5BC65A6F26208C74000ADDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A6E26208C74000ADDD1 /* Assets.xcassets */; };
 		5BC65A7226208C74000ADDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A7026208C74000ADDD1 /* LaunchScreen.storyboard */; };
+		5BC65A7D26208CEB000ADDD1 /* detector.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BC65A7C26208CEB000ADDD1 /* detector.c */; };
+		5BC65A8B26208E41000ADDD1 /* libdarknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC65A8A26208E41000ADDD1 /* libdarknet.a */; };
+		5BC65A8E26208E59000ADDD1 /* darknet19_448.conv.23 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */; };
+		5BC65A9126208E82000ADDD1 /* obj.names in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9026208E82000ADDD1 /* obj.names */; };
+		5BC65A9426208E98000ADDD1 /* yolov2-tiny.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */; };
+		5BC65A9726208F63000ADDD1 /* deepfake-dataset5 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,15 @@
 		5BC65A6E26208C74000ADDD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC65A7126208C74000ADDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC65A7326208C74000ADDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC65A7A26208CEB000ADDD1 /* yolo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "yolo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BC65A7B26208CEB000ADDD1 /* detector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = detector.h; sourceTree = "<group>"; };
+		5BC65A7C26208CEB000ADDD1 /* detector.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = detector.c; sourceTree = "<group>"; };
+		5BC65A8426208DDD000ADDD1 /* darknet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = darknet.h; sourceTree = "<group>"; };
+		5BC65A8A26208E41000ADDD1 /* libdarknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdarknet.a; sourceTree = "<group>"; };
+		5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */ = {isa = PBXFileReference; lastKnownFileType = file; path = darknet19_448.conv.23; sourceTree = "<group>"; };
+		5BC65A9026208E82000ADDD1 /* obj.names */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = obj.names; sourceTree = "<group>"; };
+		5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "yolov2-tiny.cfg"; sourceTree = "<group>"; };
+		5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "deepfake-dataset5"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC65A8B26208E41000ADDD1 /* libdarknet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +72,11 @@
 		5BC65A6426208C73000ADDD1 /* yolo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */,
+				5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */,
+				5BC65A9026208E82000ADDD1 /* obj.names */,
+				5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */,
+				5BC65A8A26208E41000ADDD1 /* libdarknet.a */,
 				5BC65A6526208C73000ADDD1 /* AppDelegate.swift */,
 				5BC65A6726208C73000ADDD1 /* SceneDelegate.swift */,
 				5BC65A6926208C73000ADDD1 /* ViewController.swift */,
@@ -63,6 +84,10 @@
 				5BC65A6E26208C74000ADDD1 /* Assets.xcassets */,
 				5BC65A7026208C74000ADDD1 /* LaunchScreen.storyboard */,
 				5BC65A7326208C74000ADDD1 /* Info.plist */,
+				5BC65A7B26208CEB000ADDD1 /* detector.h */,
+				5BC65A7C26208CEB000ADDD1 /* detector.c */,
+				5BC65A7A26208CEB000ADDD1 /* yolo-ios-Bridging-Header.h */,
+				5BC65A8426208DDD000ADDD1 /* darknet.h */,
 			);
 			path = "yolo-ios";
 			sourceTree = "<group>";
@@ -98,6 +123,7 @@
 				TargetAttributes = {
 					5BC65A6126208C73000ADDD1 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -126,6 +152,10 @@
 			files = (
 				5BC65A7226208C74000ADDD1 /* LaunchScreen.storyboard in Resources */,
 				5BC65A6F26208C74000ADDD1 /* Assets.xcassets in Resources */,
+				5BC65A9726208F63000ADDD1 /* deepfake-dataset5 in Resources */,
+				5BC65A9126208E82000ADDD1 /* obj.names in Resources */,
+				5BC65A9426208E98000ADDD1 /* yolov2-tiny.cfg in Resources */,
+				5BC65A8E26208E59000ADDD1 /* darknet19_448.conv.23 in Resources */,
 				5BC65A6D26208C73000ADDD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC65A6A26208C73000ADDD1 /* ViewController.swift in Sources */,
+				5BC65A7D26208CEB000ADDD1 /* detector.c in Sources */,
 				5BC65A6626208C73000ADDD1 /* AppDelegate.swift in Sources */,
 				5BC65A6826208C73000ADDD1 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AGUHYBS32N;
 				INFOPLIST_FILE = "yolo-ios/Info.plist";
@@ -293,8 +325,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yolo-ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.companygoeshere.yolo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "yolo-ios/yolo-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AGUHYBS32N;
 				INFOPLIST_FILE = "yolo-ios/Info.plist";
@@ -312,8 +351,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yolo-ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.companygoeshere.yolo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "yolo-ios/yolo-ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
