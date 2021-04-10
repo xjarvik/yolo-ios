@@ -17,7 +17,7 @@
 		5BC65A8B26208E41000ADDD1 /* libdarknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC65A8A26208E41000ADDD1 /* libdarknet.a */; };
 		5BC65A8E26208E59000ADDD1 /* darknet19_448.conv.23 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */; };
 		5BC65A9126208E82000ADDD1 /* obj.names in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9026208E82000ADDD1 /* obj.names */; };
-		5BC65A9426208E98000ADDD1 /* yolov2-tiny.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */; };
+		5BC65A9426208E98000ADDD1 /* yolov2.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9326208E98000ADDD1 /* yolov2.cfg */; };
 		5BC65A9726208F63000ADDD1 /* deepfake-dataset5 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		5BC65A8A26208E41000ADDD1 /* libdarknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdarknet.a; sourceTree = "<group>"; };
 		5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */ = {isa = PBXFileReference; lastKnownFileType = file; path = darknet19_448.conv.23; sourceTree = "<group>"; };
 		5BC65A9026208E82000ADDD1 /* obj.names */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = obj.names; sourceTree = "<group>"; };
-		5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "yolov2-tiny.cfg"; sourceTree = "<group>"; };
+		5BC65A9326208E98000ADDD1 /* yolov2.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yolov2.cfg; sourceTree = "<group>"; };
 		5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "deepfake-dataset5"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */,
-				5BC65A9326208E98000ADDD1 /* yolov2-tiny.cfg */,
+				5BC65A9326208E98000ADDD1 /* yolov2.cfg */,
 				5BC65A9026208E82000ADDD1 /* obj.names */,
 				5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */,
 				5BC65A8A26208E41000ADDD1 /* libdarknet.a */,
@@ -154,7 +154,7 @@
 				5BC65A6F26208C74000ADDD1 /* Assets.xcassets in Resources */,
 				5BC65A9726208F63000ADDD1 /* deepfake-dataset5 in Resources */,
 				5BC65A9126208E82000ADDD1 /* obj.names in Resources */,
-				5BC65A9426208E98000ADDD1 /* yolov2-tiny.cfg in Resources */,
+				5BC65A9426208E98000ADDD1 /* yolov2.cfg in Resources */,
 				5BC65A8E26208E59000ADDD1 /* darknet19_448.conv.23 in Resources */,
 				5BC65A6D26208C73000ADDD1 /* Main.storyboard in Resources */,
 			);

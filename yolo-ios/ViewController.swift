@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         createTrainAndTestFiles()
         
         let objDataFilePath = createObjDataFile()
-        let cfgPath = Bundle.main.path(forResource: "yolov2-tiny", ofType: "cfg")!
+        let cfgPath = Bundle.main.path(forResource: "yolov2", ofType: "cfg")!
         let weightsPath = Bundle.main.path(forResource: "darknet19_448.conv", ofType:"23")!
         var zero: Int32 = 0
         
