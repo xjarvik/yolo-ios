@@ -8,23 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var trainButton: UIButton!
+    @IBOutlet weak var trainSpinner: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        createTrainAndTestFiles()
-        
-        let objDataFilePath = createObjDataFile()
-        let cfgPath = Bundle.main.path(forResource: "yolov2", ofType: "cfg")!
-        let weightsPath = Bundle.main.path(forResource: "darknet19_448.conv", ofType:"23")!
-        var zero: Int32 = 0
-        
-        train_detector(
-            makeCString(from: objDataFilePath),
-            makeCString(from: cfgPath),
-            makeCString(from: weightsPath),
-            &zero, 1, 0
-        )
     }
 
     func createObjDataFile() -> String{
@@ -120,5 +108,44 @@ class ViewController: UIViewController {
         }
         return result
     }
+    
+    @IBAction func trainButtonPressed() {
+        trainButton.isEnabled = false
+        trainButton.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.5), for: .disabled)
+        trainButton.setTitle("Training...", for: .disabled)
+        
+        trainSpinner.isHidden = false
+        
+        createTrainAndTestFiles()
+        
+        let objDataFilePath = createObjDataFile()
+        let cfgPath = Bundle.main.path(forResource: "yolov2", ofType: "cfg")!
+        let weightsPath = Bundle.main.path(forResource: "darknet19_448.conv", ofType:"23")!
+        var zero: Int32 = 0
+        
+        DispatchQueue.background(background:{
+            train_detector(
+                self.makeCString(from: objDataFilePath),
+                self.makeCString(from: cfgPath),
+                self.makeCString(from: weightsPath),
+                &zero, 1, 0
+            )
+        }, completion:{
+            self.trainButton.isEnabled = true
+            self.trainSpinner.isHidden = true
+        })
+    }
 }
 
+extension DispatchQueue {
+    static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
+        DispatchQueue.global(qos: .background).async {
+            background?()
+            if let completion = completion {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+                    completion()
+                })
+            }
+        }
+    }
+}
