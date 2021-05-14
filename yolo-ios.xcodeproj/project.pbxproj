@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01111D2642C123006934B0 /* libdarknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B01111C2642C123006934B0 /* libdarknet.a */; };
 		5BC65A6626208C73000ADDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC65A6526208C73000ADDD1 /* AppDelegate.swift */; };
 		5BC65A6826208C73000ADDD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC65A6726208C73000ADDD1 /* SceneDelegate.swift */; };
 		5BC65A6A26208C73000ADDD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC65A6926208C73000ADDD1 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		5BC65A6F26208C74000ADDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A6E26208C74000ADDD1 /* Assets.xcassets */; };
 		5BC65A7226208C74000ADDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A7026208C74000ADDD1 /* LaunchScreen.storyboard */; };
 		5BC65A7D26208CEB000ADDD1 /* detector.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BC65A7C26208CEB000ADDD1 /* detector.c */; };
-		5BC65A8B26208E41000ADDD1 /* libdarknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC65A8A26208E41000ADDD1 /* libdarknet.a */; };
 		5BC65A8E26208E59000ADDD1 /* darknet19_448.conv.23 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */; };
 		5BC65A9126208E82000ADDD1 /* obj.names in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9026208E82000ADDD1 /* obj.names */; };
 		5BC65A9426208E98000ADDD1 /* yolov2.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 5BC65A9326208E98000ADDD1 /* yolov2.cfg */; };
@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B01111C2642C123006934B0 /* libdarknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdarknet.a; sourceTree = "<group>"; };
 		5BC65A6226208C73000ADDD1 /* yolo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yolo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC65A6526208C73000ADDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC65A6726208C73000ADDD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		5BC65A7B26208CEB000ADDD1 /* detector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = detector.h; sourceTree = "<group>"; };
 		5BC65A7C26208CEB000ADDD1 /* detector.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = detector.c; sourceTree = "<group>"; };
 		5BC65A8426208DDD000ADDD1 /* darknet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = darknet.h; sourceTree = "<group>"; };
-		5BC65A8A26208E41000ADDD1 /* libdarknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdarknet.a; sourceTree = "<group>"; };
 		5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */ = {isa = PBXFileReference; lastKnownFileType = file; path = darknet19_448.conv.23; sourceTree = "<group>"; };
 		5BC65A9026208E82000ADDD1 /* obj.names */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = obj.names; sourceTree = "<group>"; };
 		5BC65A9326208E98000ADDD1 /* yolov2.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yolov2.cfg; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC65A8B26208E41000ADDD1 /* libdarknet.a in Frameworks */,
+				5B01111D2642C123006934B0 /* libdarknet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,11 +72,11 @@
 		5BC65A6426208C73000ADDD1 /* yolo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5B01111C2642C123006934B0 /* libdarknet.a */,
 				5BC65A9626208F63000ADDD1 /* deepfake-dataset5 */,
 				5BC65A9326208E98000ADDD1 /* yolov2.cfg */,
 				5BC65A9026208E82000ADDD1 /* obj.names */,
 				5BC65A8D26208E59000ADDD1 /* darknet19_448.conv.23 */,
-				5BC65A8A26208E41000ADDD1 /* libdarknet.a */,
 				5BC65A6526208C73000ADDD1 /* AppDelegate.swift */,
 				5BC65A6726208C73000ADDD1 /* SceneDelegate.swift */,
 				5BC65A6926208C73000ADDD1 /* ViewController.swift */,
