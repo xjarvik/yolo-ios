@@ -10,7 +10,23 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var trainButton: UIButton!
     @IBOutlet weak var trainSpinner: UIActivityIndicatorView!
-
+    @IBOutlet weak var elapsedLabel: UILabel!
+    
+    var elapsed = 0
+    var timer: Timer? = nil
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.elapsed += 1
+            
+            let hours: Int = self.elapsed / 3600
+            let minutes: Int = (self.elapsed % 3600) / 60
+            let seconds: Int = (self.elapsed % 60)
+            
+            self.elapsedLabel.text = String(hours) + "h " + String (minutes) + "m " + String(seconds) + "s elapsed"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -110,6 +126,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func trainButtonPressed() {
+        elapsed = 0
+        startTimer()
+        
         trainButton.isEnabled = false
         trainButton.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.5), for: .disabled)
         trainButton.setTitle("Training...", for: .disabled)
@@ -133,6 +152,7 @@ class ViewController: UIViewController {
         }, completion:{
             self.trainButton.isEnabled = true
             self.trainSpinner.isHidden = true
+            self.timer?.invalidate()
         })
     }
 }
